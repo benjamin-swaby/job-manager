@@ -22,7 +22,7 @@ func purgeCommas(targetString string) string{
 	return processedString
 }
 func writeToFile(text []string){
-	f, err := os.Create("/home/ben/Documents/notebook.txt")
+	f, err := os.Create("/etc/planner/notebook.txt")
     if err != nil {
         return
 	}
@@ -45,7 +45,7 @@ func load() []string{
 	text := []string{};
 
 
-	file, err := os.Open("/home/ben/Documents/notebook.txt")
+	file, err := os.Open("/etc/planner/notebook.txt")
     if err != nil {
         log.Fatal(err)
     }
